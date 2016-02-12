@@ -1,0 +1,2 @@
+#- name: restart someservice
+#  service: name=someservice state=restarted

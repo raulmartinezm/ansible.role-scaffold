@@ -1,0 +1,13 @@
+---
+- hosts: "all"
+  sudo: true
+
+  vars: 
+    playbook_name: playbook
+
+#  pre_tasks:
+
+  roles:
+    - { role: ansible.role-scaffold, tags: ["ansible_template"] }
+
+#  post_tasks:

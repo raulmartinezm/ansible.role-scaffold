@@ -1,0 +1,22 @@
+---
+# Include vars
+- name: Include vars
+  include_vars: "{{ ansible_os_family }}.yml"
+
+# Code
+
+
+- include: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+- include: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
+
+# Code
+
+
+- include: configure-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+- include: configure-Debian.yml
+  when: ansible_os_family == 'Debian'
+
+ # More code maybe
