@@ -1,0 +1,9 @@
+---
+- hosts: test-kitchen
+
+# pre_tasks:
+
+  roles:
+    - { role: ansible.role-scaffold ,tags: ["scaffold"] }
+
+# post_tasks:
